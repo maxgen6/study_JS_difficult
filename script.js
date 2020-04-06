@@ -1,22 +1,18 @@
 'use strict';
 
-let  arr = [];
+let  week = ['monday' , 'tuesday' , 'wensday' , 'thursday' , 'friday' , 'saturday' , 'sunday'];
+const Data = new Date();
+const Year = Data.getFullYear();
+const Month = Data.getMonth();
+const Day = Data.getDate();  
 
-let searchNumber = function(){
-        for (let i = 0; i < 7; i++){
-        arr[i] = prompt('Enter the number: ');
-        arr[i] = arr[i].toString();
-              
-          
-        if(arr[i].length === 7 && (arr[i].startsWith('2') || arr[i].startsWith('4'))){
-            
-             console.log(arr[i]);
-        }
-        
-       
-        
-         
-    
+for( let i = 0; i < week.length; i++){
+    if(i < 5){
+        console.log(week[i]);
+    } else {
+        console.log(week[i].italics()); 
     }
+    
 }
-searchNumber();
+
+console.log('Сегедня: ' + Day + ' ' + (Month + 1) + ' ' + Year);
